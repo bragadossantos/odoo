@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Spain - Accounting (PGCE 2008)',
     'website': 'https://www.odoo.com/documentation/17.0/applications/finance/fiscal_localizations/spain.html',

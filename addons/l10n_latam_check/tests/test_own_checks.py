@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 from odoo.addons.l10n_latam_check.tests.common import L10nLatamCheckTest
 from odoo.tests.common import Form, tagged
 from odoo import fields

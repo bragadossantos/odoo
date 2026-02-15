@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 from odoo import Command
 from odoo.addons.hr_expense.tests.common import TestExpenseCommon
 from odoo.tests import tagged

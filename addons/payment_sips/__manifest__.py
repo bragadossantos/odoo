@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 # Original Copyright 2015 Eezee-It, modified and maintained by Odoo.
 
 {

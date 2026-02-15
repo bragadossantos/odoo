@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 from odoo.addons.sale_loyalty.tests.common import TestSaleCouponNumbersCommon
 from odoo.addons.website.tools import MockRequest

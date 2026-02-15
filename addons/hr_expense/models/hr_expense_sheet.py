@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 from odoo import api, fields, Command, models, _
 from odoo.exceptions import UserError, ValidationError, RedirectWarning

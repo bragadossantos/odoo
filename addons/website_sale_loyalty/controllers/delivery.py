@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 from odoo.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
 from odoo.addons.payment import utils as payment_utils

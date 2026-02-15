@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 import ast
 import collections.abc
@@ -8,11 +8,25 @@ import functools
 import importlib
 import logging
 import os
-import pkg_resources
 import re
 import sys
 import warnings
 from os.path import join as opj, normpath
+
+# Handle pkg_resources compatibility with Python 3.14+
+try:
+    import pkg_resources
+    HAS_PKG_RESOURCES = True
+except ImportError:
+    HAS_PKG_RESOURCES = False
+    class pkg_resources:
+        class DistributionNotFound(Exception):
+            pass
+        class VersionConflict(Exception):
+            pass
+        @staticmethod
+        def get_distribution(pkg):
+            return importlib.import_module(pkg)
 
 import odoo
 import odoo.tools as tools
@@ -463,21 +477,28 @@ current_test = False
 
 
 def check_python_external_dependency(pydep):
-    try:
-        pkg_resources.get_distribution(pydep)
-    except pkg_resources.DistributionNotFound as e:
+    if HAS_PKG_RESOURCES:
+        try:
+            pkg_resources.get_distribution(pydep)
+        except pkg_resources.DistributionNotFound as e:
+            try:
+                importlib.import_module(pydep)
+                _logger.info("python external dependency on '%s' does not appear to be a valid PyPI package. Using a PyPI package name is recommended.", pydep)
+            except ImportError:
+                # backward compatibility attempt failed
+                _logger.warning("DistributionNotFound: %s", e)
+                raise Exception('Python library not installed: %s' % (pydep,))
+        except pkg_resources.VersionConflict as e:
+            _logger.warning("VersionConflict: %s", e)
+            raise Exception('Python library version conflict: %s' % (pydep,))
+        except Exception as e:
+            _logger.warning("get_distribution(%s) failed: %s", pydep, e)
+    else:
+        # Fallback when pkg_resources is not available
         try:
             importlib.import_module(pydep)
-            _logger.info("python external dependency on '%s' does not appear to be a valid PyPI package. Using a PyPI package name is recommended.", pydep)
         except ImportError:
-            # backward compatibility attempt failed
-            _logger.warning("DistributionNotFound: %s", e)
             raise Exception('Python library not installed: %s' % (pydep,))
-    except pkg_resources.VersionConflict as e:
-        _logger.warning("VersionConflict: %s", e)
-        raise Exception('Python library version conflict: %s' % (pydep,))
-    except Exception as e:
-        _logger.warning("get_distribution(%s) failed: %s", pydep, e)
         raise Exception('Error finding python library %s' % (pydep,))
 
 

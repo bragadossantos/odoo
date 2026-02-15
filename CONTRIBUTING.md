@@ -1,14 +1,15 @@
-Contributing to Odoo
+Contributing to RebeccaGest
 ====================
 
-[Full contribution guidelines](https://github.com/odoo/odoo/wiki/Contributing)
+[Full contribution guidelines](https://github.com/rebeccagest/rebeccagest/wiki/Contributing)
 
 TL;DR
 
-* If you [make a pull request](https://github.com/odoo/odoo/wiki/Contributing#making-pull-requests),
+* If you [make a pull request](https://github.com/RebeccaGest/RebeccaGest/wiki/Contributing#making-pull-requests),
   do not create an issue! Use the PR description for that
 * Issues are handled with a much lower priority than pull requests
-* Use this [template](https://github.com/odoo/odoo/wiki/Contributing#reporting-issues)
+* Use this [template](https://github.com/RebeccaGest/RebeccaGest/wiki/Contributing#reporting-issues)
   when reporting issues. Please search for duplicates first!
-* Pull requests must be made against the [correct version](https://github.com/odoo/odoo/wiki/Contributing#against-which-version-should-i-submit-a-patch)
-* There are restrictions on the kind of [changes allowed in stable series](https://github.com/odoo/odoo/wiki/Contributing#what-does-stable-mean)
+* Pull requests must be made against the [correct version](https://github.com/RebeccaGest/RebeccaGest/wiki/Contributing#against-which-version-should-i-submit-a-patch)
+* There are restrictions on the kind of [changes allowed in stable series](https://github.com/RebeccaGest/RebeccaGest/wiki/Contributing#what-does-stable-mean)
+

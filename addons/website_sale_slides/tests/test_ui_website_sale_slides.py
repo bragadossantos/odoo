@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 from odoo import fields, tests
 from odoo.addons.website_slides.tests import test_ui_wslides

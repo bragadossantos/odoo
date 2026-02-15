@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
-""" OpenERP core library."""
+""" RebeccaGest core library."""
 
 
 #----------------------------------------------------------
@@ -18,7 +18,7 @@ __path__ = [
 import sys
 MIN_PY_VERSION = (3, 10)
 MAX_PY_VERSION = (3, 13)
-assert sys.version_info > MIN_PY_VERSION, f"Outdated python version detected, Odoo requires Python >= {'.'.join(map(str, MIN_PY_VERSION))} to run."
+assert sys.version_info > MIN_PY_VERSION, f"Outdated python version detected, RebeccaGest requires Python >= {'.'.join(map(str, MIN_PY_VERSION))} to run."
 
 #----------------------------------------------------------
 # Running mode flags (gevent, prefork)

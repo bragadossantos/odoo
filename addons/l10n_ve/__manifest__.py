@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Venezuela - Accounting',
     'website': 'https://www.odoo.com/documentation/17.0/applications/finance/fiscal_localizations.html',

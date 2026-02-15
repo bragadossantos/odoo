@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 from odoo import models, fields, api, _
 from odoo.tools import SQL, unique
 from odoo.tools.float_utils import float_round, float_compare

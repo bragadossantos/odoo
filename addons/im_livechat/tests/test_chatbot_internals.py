@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 from odoo.addons.im_livechat.tests import chatbot_common
 from odoo.exceptions import ValidationError

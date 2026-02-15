@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 from odoo.tests.common import TransactionCase, tagged
 from odoo.tools._monkeypatches import new_get_soap_client
 from odoo.exceptions import ValidationError

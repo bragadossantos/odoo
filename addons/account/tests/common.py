@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 from odoo import fields, models, Command
 from odoo.tools import config, file_path, file_open
 from odoo.tests import save_test_file, Form, HttpCase, TransactionCase

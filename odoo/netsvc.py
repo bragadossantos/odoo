@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 import contextlib
 import json
 import logging
@@ -14,7 +14,14 @@ import traceback
 import warnings
 
 import werkzeug.serving
-from pkg_resources import PkgResourcesDeprecationWarning
+
+# Handle pkg_resources compatibility with Python 3.14+
+try:
+    from pkg_resources import PkgResourcesDeprecationWarning
+except ImportError:
+    # Fallback for Python 3.14+ where pkg_resources may not be available
+    class PkgResourcesDeprecationWarning(DeprecationWarning):
+        pass
 
 from . import release
 from . import sql_db

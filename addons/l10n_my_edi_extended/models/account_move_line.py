@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 from odoo import fields, models, api
 from odoo.addons.l10n_my_edi.models.product_template import CLASSIFICATION_CODES_LIST

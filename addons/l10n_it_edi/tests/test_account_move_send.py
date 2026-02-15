@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of RebeccaGest. See LICENSE file for full copyright and licensing details.
 
 from odoo.tests import tagged
 from odoo.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
