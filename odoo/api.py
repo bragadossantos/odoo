@@ -520,7 +520,21 @@ class Environment(Mapping):
             transaction = cr.transaction = Transaction(Registry(cr.dbname))
 
         # if env already exists, return it
-        for env in transaction.envs:
+        # Use list() to avoid WeakSet iteration issues in Python 3.14+
+        try:
+            envs_to_check = list(transaction.envs)
+        except (AttributeError, TypeError):
+            envs_to_check = list(transaction.envs.data) if hasattr(transaction.envs, 'data') else []
+        
+        for env_ref in envs_to_check:
+            # Handle both direct env and weakref (Python 3.14+ compatibility)
+            try:
+                env = env_ref() if isinstance(env_ref, type(lambda: None).__self__.__class__) else env_ref
+                if env is None:
+                    continue
+            except:
+                continue
+                
             if (env.cr, env.uid, env.context, env.su, env.uid_origin) == (cr, uid, context, su, uid_origin):
                 return env
 
